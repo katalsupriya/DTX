@@ -102,6 +102,27 @@ namespace TourismDXP.Data.Configuration
             context.SaveChanges();
             #endregion
 
+            #region Admin 
+            var admin = context.Users.Any(x => x.Username == "admintourdmx@mailinator.com");
+            if (!admin)
+            {
+                User user = new User()
+                {
+                    Email = "admintourdmx@mailinator.com",
+                    //asd@123
+                    Password = "fi//htPMk3EbIYEF8HLkUTYGF2gv2Q9wUu05CzqrWhFot2ZIauxT4hfxXER8QtjeOj21LuM9zBsQLIoKwTgooxUlNBEY27dt8cYPZCoehKA=",
+                    RoleId = 1,
+                    Role = "1",
+                    Username = "admintourdmx@mailinator.com",
+
+                };
+                context.Users.Add(user);
+                context.SaveChanges();
+            }
+
+
+            #endregion
+
         }
     }
 }

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- Custom styles for this template -->
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+
+    <div class="d-flex align-items-center bd-highlight vh-100">
+        <div class="box w-100 d-flex justify-content-center">
+            @RenderBody()
+        </div>
+    </div>
+
+</body>
+</html>

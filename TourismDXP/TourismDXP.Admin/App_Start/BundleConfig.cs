@@ -20,11 +20,20 @@ namespace TourismDXP.Admin
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.bundle.min.js",
+                      "~/Scripts/sidenav/sidenav.js"
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/css/main.css",
+                      "~/Content/css/sidenav.css",
+                      "~/Content/fontawesome/css/all.css"
+                      ));
+
+            bundles.Add(new StyleBundle("~/Content/auth").Include(
+                "~/Content/css/bootstrap.min.css",
+                 "~/Content/css/floating-labels.css"
+                 ));
         }
     }
 }

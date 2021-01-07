@@ -40,13 +40,15 @@ namespace TourismDXP.Data.Context
         #region ADO DbSets
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UserInRole> UserInRoles { get; set; }
 
         public DbSet<Portal> Portals { get; set; }
         public DbSet<PortalUser> PortalUsers { get; set; }
         //Look up 
         public DbSet<LookUpDomain> LookUpDomains { get; set; }
         public DbSet<LookUpDomainValue> LookUpDomainValues { get; set; }
+
+        public virtual DbSet<UserInRole> UserInRole { get; set; }
+        public virtual DbSet<UserMap> UserMap { get; set; }
 
         #endregion
 
